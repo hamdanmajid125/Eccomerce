@@ -1,38 +1,172 @@
-.App {
+*
+{
+  margin: 0;
+  padding: 0;
+}
+.navbarcenter
+{
   text-align: center;
+  margin: 0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-item
+{
+  padding: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.userIcon {
+  color: white;
+  stroke: black;
+  stroke-width: 30px;
+  font-size: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+span.gapmargin {
+  margin-left: 10px;
+}
+.carousel-caption
+{
+  color: black;
+  font-weight: 700;
+}
+h5.h5head {
+  font-weight: 700;
+  font-size: 28px;
+}
+.carousel-caption.d-none.d-md-block {
+  text-align: left;
+  top: 6em;
+}
+.golden
+{
+  color: #ba933e;
+}
+h1.bannerhead {
+  font-size: 55px;
+  font-weight: 700;
+}
+button.btn.btn-dark.shopbutton {
+  margin-top: 1em;
+  padding: 10px 40px;
+  border-radius: 0;
+}
+nav.navbar.navbar-expand-lg.navbar-light.shadow {
+  position: fixed;
+  z-index: 999999999999999999;
+  width: 100%;
+  background: white;
+}
+.containerpadding
+{
+  padding: 4em 0;
+}
+img {
+  width: 100%;
+}
+span.badge.badge-secondary.primary {
+  background: #ba933e;
+  position: absolute;
+  top: 1em;
+  font-size: 12px;
+  right: 1em;
+}
+.productcontent.text-left{
+  margin-top:10px;
+  text-align: left;
+}
+.productitle
+{
+  font-weight: 700;
+}
+.productitem
+{
+  position: relative;
+}
+span.badge.badge-secondary.blogsale {
+  background: #ba933e;
+  font-size: 13px;
+}
+.blogcat {
+  text-align: left;
+}
+span.date.blog {
+  font-weight: 100;
+}
+p.blogpara {
+  font-size: 15px;
+  text-align: justify;
+}
+button.btn.primary {
+  border: 1px solid #e1e1e1;
+  padding: 11px 40px;
+}
+button.btn.primary:hover {
+  border: 1px solid #ba933e;
+  padding: 11px 40px;
+  color: #ba933e;
+}
+button.btn.btn-dark.shopbutton:hover
+{
+  border: white;
+  background: white;
+  color: black;
+}
+.footer
+{
+  background-color: black;
   color: white;
 }
+img.footerlogo {
+  width: 50%;
+}
+ul.footerul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #999999;
+}
+.footerIcons
+{
+  color:#999999;
+  font-size: 25px;
+}
+.grey
+{
+  color:#999999;
 
-.App-link {
-  color: #61dafb;
+}
+.carousel-item.banner.active {
+  margin-top: 5em;
+}
+.carousel-caption.d-none.d-md-block.bannertitle {
+  top: 4em;
+}
+.carousel-caption.d-none.d-md-block.bannertitle > h1 {
+  font-weight: 650;
+  font-size: 50px;
+}
+.cat-ul
+{
+  list-style: none;
+  padding-left: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img.productimg {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+.thumbnails {
+  width: 62px;
+  height: 5px;
+}
+
+.links {
+  padding-left: 50px  
+}
+ul.dropdown-menu.show {
+  padding: 0;
+}
+.sidebarh6
+{
+  font-size: 19px;
 }
