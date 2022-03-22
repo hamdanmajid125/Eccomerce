@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Images from "../components/images/imagejson";
 import ProductItemHome from "../components/ProductItemHome";
 import ProductCat from "../components/ProductCat";
@@ -6,10 +6,11 @@ import BlogCatalog from "../components/BlogCatalog";
 import Carousel from "../components/Carousel";
 
 
-export default function Home() {
+export default function Home(props) {
+
   return (
     <>
-      <Carousel/>
+      <Carousel />
       <div className="container text-center containerpadding">
         <h3 className="mb-4">Trending Products</h3>
         <div className="row">
@@ -64,10 +65,8 @@ export default function Home() {
           <div className="col-md-4">
             <BlogCatalog />
           </div>
-
         </div>
       </div>
-     
     </>
   );
 }

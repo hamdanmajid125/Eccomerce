@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ProductSideBar() {
   let [categories, categoriesState] = useState([]);
@@ -11,13 +12,16 @@ export default function ProductSideBar() {
     categoriesState(data);
     console.log(data);
   };
+  function hasSpace(value){
+    return value.indexOf(' ') >= 0;
+ }
   return (
     <div className="sidebar">
       <h6 className="sidebarh6">Product Categories</h6>
 
       <ul className="cat-ul">
         {categories.map((categories, index) => (
-          <li key={index}>{categories.category_title}</li>
+          <li key={index}><Link className="sidebaranchor" to={(hasSpace(categories.category_title.toLowerCase()))?( '/products/categories/'+categories.category_title.replace(/\s/g, '-').toLowerCase()):('/products/categories/'+categories.category_title.toLowerCase())}>{categories.category_title}</Link></li>
         ))}
       </ul>
     </div>

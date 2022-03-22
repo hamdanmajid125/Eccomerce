@@ -4,7 +4,8 @@ import Banner from "../components/Banner";
 import ProductSideBar from "../components/ProductSideBar";
 import ProductItem from "../components/ProductItem";
 
-export default function ProductCategoryShop() {
+
+export default function ProductCategoryShop(props) {
   let [products, productState] = useState([]);
   let { slug } = useParams();
   const url = window.location.pathname.split("/").pop();
@@ -22,9 +23,15 @@ export default function ProductCategoryShop() {
     return word.join(" ");
   };
   let getProducts = async () => {
+    props.setProgress(20)
     let response = await fetch("http://127.0.0.1:8000/api/getcat/" + slug);
+    props.setProgress(40)
     let data = await response.json();
+    props.setProgress(80)
     productState(data);
+    props.setProgress(100)
+
+
   };
 
   return (

@@ -170,3 +170,14 @@ ul.dropdown-menu.show {
 {
   font-size: 19px;
 }
+a.sidebaranchor {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  font-style: italic;
+}
+a.sidebaranchor:hover{
+  transition: 100ms;
+  color: #ba933e;
+  font-weight: 500;
+}
