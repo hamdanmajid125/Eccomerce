@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import ProductItem from "../components/ProductItem";
 import ProductSideBar from "../components/ProductSideBar";
-import PropTypes from "prop-types";
-
 export default function Shop(props) {
   let [products, productState] = useState([]);
   useEffect(() => {
@@ -33,6 +31,7 @@ export default function Shop(props) {
               {products.map((products, index) => (
                 <div className="col-md-3" key={index}>
                   <ProductItem
+                    proid={products.id}
                     protitle={products.pro_title}
                     procat={products.pro_category}
                     proprice={products.pro_price}

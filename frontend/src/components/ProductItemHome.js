@@ -4,9 +4,9 @@ import Images from "./images/imagejson";
 export default function ProductItemHome(props) {
 
   return (
-    <div className="productitem">
+    <div className="productitem text-center">
       <div>
-        <img src={Images.home.productimage} alt="" />
+        <img className="img-fluid" src={Images.home.productimage} alt="" />
         <span className="badge badge-secondary primary">Sale</span>
       </div>
       <div className="productcontent text-left">

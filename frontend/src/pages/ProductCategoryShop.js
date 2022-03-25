@@ -47,6 +47,7 @@ export default function ProductCategoryShop(props) {
               {products.map((products, index) => (
                 <div className="col-md-3" key={index}>
                   <ProductItem
+                    proid={products.id}
                     protitle={products.pro_title}
                     procat={products.pro_category}
                     proprice={products.pro_price}

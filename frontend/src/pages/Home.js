@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Images from "../components/images/imagejson";
 import ProductItemHome from "../components/ProductItemHome";
 import ProductCat from "../components/ProductCat";
 import BlogCatalog from "../components/BlogCatalog";
 import Carousel from "../components/Carousel";
-
 
 export default function Home(props) {
 
@@ -14,16 +13,16 @@ export default function Home(props) {
       <div className="container text-center containerpadding">
         <h3 className="mb-4">Trending Products</h3>
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-3 col-sm-3">
             <ProductItemHome />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 col-sm-3">
             <ProductItemHome />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 col-sm-3">
             <ProductItemHome />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 col-sm-3">
             <ProductItemHome />
           </div>
         </div>

@@ -1,3 +1,4 @@
+import React, { useState,useEffect } from "react";
 import Images from "./images/imagejson";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,12 +8,32 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import CategoryNavItems from "./CategoryNavItems";
+import Cart from "./Cart";
 
 export default function Navbar() {
-  
+  const [count, setcount] = useState(0)
+  const [cart, setCart] = useState(false);
+  useEffect(() => {
+    fetchData();
+  }, [cart]);
+  const fetchData = () =>
+  {
+    if(count == 0)
+    {
+      console.log("sosj")
+      setcount(count+1)
+    } 
+    else{
+      setcount(count+1)
+      setCart(true)
+    }
+  }
+
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light shadow">
+      {cart && <Cart />}
+      <nav className="navbar fixed-top navbar-expand-lg navbar-light shadow">
         <div className="container">
           <a className="navbar-brand" href="#">
             <img src={Images.home.logo} alt="" />
@@ -51,7 +72,7 @@ export default function Navbar() {
                 >
                   Collections
                 </a>
-                <CategoryNavItems/>
+                <CategoryNavItems />
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -73,7 +94,11 @@ export default function Navbar() {
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </span>
               <span className="gapmargin">
-                <FontAwesomeIcon icon={faCartPlus} />
+                <button className="btn" onClick={()=>{
+                  setCart(!cart)
+                }}>
+                  <FontAwesomeIcon icon={faCartPlus} />
+                </button>
               </span>
             </span>
           </div>

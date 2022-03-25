@@ -48,8 +48,7 @@ button.btn.btn-dark.shopbutton {
   border-radius: 0;
 }
 nav.navbar.navbar-expand-lg.navbar-light.shadow {
-  position: fixed;
-  z-index: 999999999999999999;
+  z-index: 3;
   width: 100%;
   background: white;
 }
@@ -180,4 +179,77 @@ a.sidebaranchor:hover{
   transition: 100ms;
   color: #ba933e;
   font-weight: 500;
+}
+
+.addcart
+{
+  text-align: center;
+}
+.addtocart
+{
+ 
+  background-color: #ba933e;
+  border: none;
+  color: black;
+  border-radius: 20px;
+}
+.addtext
+{
+  margin-left: 2px;
+}
+.addtocart:hover
+{
+  background-color: black;
+  transition: ease-in;
+  transition-duration: 300ms;
+  border: none;
+  color: white;
+  border-radius: 20px;
+}
+.producttitleh5
+{
+  margin-bottom: 10px;
+}
+p.procontent
+{
+margin: 0;
+}
+.number {
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+.btn-circle {
+  background-color: #ba933e;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 0.42857;
+  border: 1px transparent;
+}
+
+.counterinput {
+  height: 27px;
+  width: 23px;
+  margin: 0 10px;
+  border-radius: 25%;
+  text-align: center;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+}
+.icondelete {
+  
+  margin-top: 20px;
+  margin-right: 16px;
+}
+
+.trash {
+  font-size: large;
+  color: #cf4242;
 }
