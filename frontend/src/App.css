@@ -253,3 +253,8 @@ margin: 0;
   font-size: large;
   color: #cf4242;
 }
+.cart-buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

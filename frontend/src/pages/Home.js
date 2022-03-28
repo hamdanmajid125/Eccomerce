@@ -5,6 +5,7 @@ import ProductCat from "../components/ProductCat";
 import BlogCatalog from "../components/BlogCatalog";
 import Carousel from "../components/Carousel";
 
+
 export default function Home(props) {
 
   return (

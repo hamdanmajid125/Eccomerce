@@ -15,7 +15,6 @@ export default function Shop(props) {
     props.setProgress(60);
     productState(data);
     props.setProgress(80);
-    console.log(data);
     props.setProgress(100);
   };
   return (
@@ -29,6 +28,7 @@ export default function Shop(props) {
           <div className="col-md-10">
             <div className="row">
               {products.map((products, index) => (
+                
                 <div className="col-md-3" key={index}>
                   <ProductItem
                     proid={products.id}

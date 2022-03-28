@@ -20,7 +20,6 @@ export default function Navbar() {
   {
     if(count == 0)
     {
-      console.log("sosj")
       setcount(count+1)
     } 
     else{

@@ -10,7 +10,6 @@ export default function ProductSideBar() {
     let response = await fetch("http://127.0.0.1:8000/api/getcat/");
     let data = await response.json();
     categoriesState(data);
-    console.log(data);
   };
   function hasSpace(value){
     return value.indexOf(' ') >= 0;

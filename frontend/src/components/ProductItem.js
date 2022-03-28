@@ -3,29 +3,53 @@ import PropTypes from "prop-types";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-let procart = {}
+let procart = [];
 export default function ProductItem(props) {
-  let [cart, setcart] = useState(null)
-
-  const handleAddCart = () => {
-    if (cart == null) {
-      cart = {};
-      cart[props.proid] = 1;
-      procart[props.proid] = cart
-
-    } else {
-      if (cart[props.proid] !== undefined) {
-        cart[props.proid] = cart[props.proid] + 1;
-        procart[props.proid] = cart[props.proid]
-        
-
-      } else {
-        cart[props.proid] = 1;
-        procart[props.proid] = cart
+  let [cart, setcart] = useState(null);
+  const populateCartFirst = () => {
+    cart["id"] = props.proid;
+    cart["pro_title"] = props.protitle;
+    cart["pro_price"] = props.proprice;
+    cart["buy_qty"] = 1;
+    cart["pro_image"] = props.proimg;
+    procart.push(cart);
+  };
+  const populateCart = () => {
+    for (var i = 0; i < procart.length; i++) {
+      if (procart[i]["pro_title"] === props.protitle) {
+        procart[i]["buy_qty"] = procart[i]["buy_qty"] + 1;
       }
     }
-    console.log(localStorage)
-    localStorage.setItem('items', JSON.stringify(procart));
+  };
+  const exisiting = () => {
+    for (var i = 0; i < procart.length; i++) {
+      if (procart[i]["pro_title"] === props.protitle) {
+        procart[i]["buy_qty"] = procart[i]["buy_qty"] + 1;
+        return true;
+      }
+    }
+    return false;
+  };
+  const handleAddCart = () => {
+    if (cart == null || sessionStorage.items == undefined) {
+      if (sessionStorage.items === undefined) {
+        procart = [];
+      } 
+    cart = {};
+    if (exisiting() == false) {
+      populateCartFirst();
+      
+        sessionStorage.setItem("items", JSON.stringify(procart));
+      }
+    } else {
+      cart = {};
+      populateCart();
+
+      sessionStorage.setItem("items", JSON.stringify(procart));
+    }
+
+    setcart(null);
+    console.log(procart);
   };
   return (
     <div className="productitem">
