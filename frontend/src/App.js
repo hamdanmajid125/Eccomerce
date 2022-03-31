@@ -8,13 +8,14 @@ import Footer from "./components/Footer";
 import ProductCategoryShop from "./pages/ProductCategoryShop";
 import LoadingBar from "react-top-loading-bar";
 import Cart from "./components/Cart";
+import CheckOut from "./pages/CheckOut";
 
 
 
 export default function App() {
   const [progress, setProgress] = useState(0);
   return (
-    <Router>
+    <Router>      
       <Navbar />
       {/* <Cart/> */}
       <LoadingBar
@@ -30,7 +31,8 @@ export default function App() {
       />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/cart" element={<Cart show={true}/>} />
+        <Route exact path="/checkout" element={<CheckOut show={true}/>} />
+
 
         <Route
           exact

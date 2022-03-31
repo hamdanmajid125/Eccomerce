@@ -1,15 +1,20 @@
-*
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: #000;
+}
+* {
   margin: 0;
   padding: 0;
 }
-.navbarcenter
-{
+.navbarcenter {
   text-align: center;
   margin: 0 auto;
 }
-.nav-item
-{
+.nav-item {
   padding: 15px;
 }
 .userIcon {
@@ -21,8 +26,7 @@
 span.gapmargin {
   margin-left: 10px;
 }
-.carousel-caption
-{
+.carousel-caption {
   color: black;
   font-weight: 700;
 }
@@ -34,8 +38,7 @@ h5.h5head {
   text-align: left;
   top: 6em;
 }
-.golden
-{
+.golden {
   color: #ba933e;
 }
 h1.bannerhead {
@@ -52,8 +55,7 @@ nav.navbar.navbar-expand-lg.navbar-light.shadow {
   width: 100%;
   background: white;
 }
-.containerpadding
-{
+.containerpadding {
   padding: 4em 0;
 }
 img {
@@ -66,16 +68,14 @@ span.badge.badge-secondary.primary {
   font-size: 12px;
   right: 1em;
 }
-.productcontent.text-left{
-  margin-top:10px;
+.productcontent.text-left {
+  margin-top: 10px;
   text-align: left;
 }
-.productitle
-{
+.productitle {
   font-weight: 700;
 }
-.productitem
-{
+.productitem {
   position: relative;
 }
 span.badge.badge-secondary.blogsale {
@@ -101,14 +101,12 @@ button.btn.primary:hover {
   padding: 11px 40px;
   color: #ba933e;
 }
-button.btn.btn-dark.shopbutton:hover
-{
+button.btn.btn-dark.shopbutton:hover {
   border: white;
   background: white;
   color: black;
 }
-.footer
-{
+.footer {
   background-color: black;
   color: white;
 }
@@ -122,15 +120,12 @@ ul.footerul {
   font-size: 14px;
   color: #999999;
 }
-.footerIcons
-{
-  color:#999999;
+.footerIcons {
+  color: #999999;
   font-size: 25px;
 }
-.grey
-{
-  color:#999999;
-
+.grey {
+  color: #999999;
 }
 .carousel-item.banner.active {
   margin-top: 5em;
@@ -142,8 +137,7 @@ ul.footerul {
   font-weight: 650;
   font-size: 50px;
 }
-.cat-ul
-{
+.cat-ul {
   list-style: none;
   padding-left: 0;
 }
@@ -160,13 +154,12 @@ img.productimg {
 }
 
 .links {
-  padding-left: 50px  
+  padding-left: 50px;
 }
 ul.dropdown-menu.show {
   padding: 0;
 }
-.sidebarh6
-{
+.sidebarh6 {
   font-size: 19px;
 }
 a.sidebaranchor {
@@ -175,30 +168,25 @@ a.sidebaranchor {
   font-weight: 300;
   font-style: italic;
 }
-a.sidebaranchor:hover{
+a.sidebaranchor:hover {
   transition: 100ms;
   color: #ba933e;
   font-weight: 500;
 }
 
-.addcart
-{
+.addcart {
   text-align: center;
 }
-.addtocart
-{
- 
+.addtocart {
   background-color: #ba933e;
   border: none;
   color: black;
   border-radius: 20px;
 }
-.addtext
-{
+.addtext {
   margin-left: 2px;
 }
-.addtocart:hover
-{
+.addtocart:hover {
   background-color: black;
   transition: ease-in;
   transition-duration: 300ms;
@@ -206,19 +194,16 @@ a.sidebaranchor:hover{
   color: white;
   border-radius: 20px;
 }
-.producttitleh5
-{
+.producttitleh5 {
   margin-bottom: 10px;
 }
-p.procontent
-{
-margin: 0;
+p.procontent {
+  margin: 0;
 }
 .number {
   margin-top: 5px;
   text-align: center;
 }
-
 
 .btn-circle {
   background-color: #ba933e;
@@ -244,7 +229,6 @@ margin: 0;
   vertical-align: middle;
 }
 .icondelete {
-  
   margin-top: 20px;
   margin-right: 16px;
 }
@@ -254,7 +238,76 @@ margin: 0;
   color: #cf4242;
 }
 .cart-buttons {
-  position: absolute;
+  position: fixed;
+  background-color: white;
   bottom: 0;
   right: 0;
+}
+.checkout {
+  margin: 5.3rem 0;
+}
+h2.happy.text-center {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.comphead {
+  font-weight: 400;
+  margin-bottom: 0.85em;
+}
+.form-check-input:checked {
+  background-color: black !important;
+  border-color: black !important;
+}
+button.btn.checkoutbtn {
+  background-color: black;
+  color: white;
+  padding: 20px 30px;
+}
+a.checkoutlink {
+  text-decoration: none;
+  color: black;
+  padding: 20px 38px;
+}
+.comp {
+  margin-bottom: 20px;
+}
+.form-control {
+  margin-bottom: 15px;
+}
+.grey {
+  background-color: #fafafa;
+}
+.productscart {
+  margin-top: 17%;
+}
+.cartcontent {
+  padding: 25px 0;
+  width: 78%;
+}
+
+.cartcontent > p {
+  font-weight: 500;
+}
+.cartimage {
+  position: relative;
+}
+
+span.qty-pro {
+  font-size: 13px;
+  background: #7f7f7f;
+  position: relative;
+  color: white;
+  font-weight: 700;
+  bottom: 95px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+hr.solid {
+  width: 78%;
+}
+.bill {
+  width: 78%;
+}
+p.price {
+  padding-left: 40px;
 }

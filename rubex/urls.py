@@ -8,4 +8,5 @@ urlpatterns = [
     path('getpro/<str:pk>/', views.get_products_by_id, name="productbyid"),
     path('getcat/<str:catname>/',views.get_category_by_name,name="catbyname")
     
+    
 ]
